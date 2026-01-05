@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
+set -e
 
-DOTFILES="$HOME/.dotfiles"
+DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
-mkdir -p "$HOME"
-
-ln -sf "$DOTFILES/zsh/.zschrc" "$HOME/.zshrc"
+ln -sf "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
+ln -sf "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
+mkdir -p "$HOME/.config"
+ln -sf "$DOTFILES/starship/starship.toml" "$HOME/.config/starship.toml"
+ln -sf "$DOTFILES/tmux/tmux.conf" "$HOME/.tmux.conf"
+ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
