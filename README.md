@@ -3,6 +3,6 @@ sudo apt install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 C-a + I
 
-sudo apt install -y ripgrep
-sudo apt install -y fd-find
+fzf ripgrep fd bat eza lazygit
+git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 sudo apt install -y neovim
